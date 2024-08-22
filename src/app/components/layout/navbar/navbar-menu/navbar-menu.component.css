@@ -1,0 +1,11 @@
+:host {
+  left: auto;
+  right: 0;
+  min-width: 20rem;
+  top: var(--navbar-height);
+  position: absolute;
+  @apply bg-secondary-400;
+  @apply z-10;
+  @apply w-full;
+  @apply md:w-80;
+}

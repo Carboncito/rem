@@ -1,0 +1,39 @@
+:host {
+  grid-area: navbar;
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--navbar-height);
+  background-color: red;
+}
+
+.sub-menu {
+  left: auto;
+  right: 0;
+  min-width: 20rem;
+  top: var(--navbar-height);
+  position: absolute;
+  @apply bg-secondary-400;
+}
+
+.overlay {
+  background-color: #23252bcc;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: var(--navbar-height);
+  width: 100%;
+  z-index: 1;
+}
+
+.overlay-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.overlay-hidden {
+  visibility: hidden;
+  opacity: 0;
+}

@@ -1,0 +1,13 @@
+<nav class="flex flex-row flex-1 justify-between items-center px-6 bg-secondary-400">
+  <div class="flex flex-row">
+    <app-icon class="sm:hidden" icon="menu" />
+    <p class="capitalize pl-2 sm:pl-0">rem</p>
+  </div>
+  <div class="flex flex-row items-center">
+    <app-avatar size="small" [imageUrl]="user.imageUrl" />
+    <app-icon class="ml-2" icon="arrow-drop" [asButton]="true" (click)="toggleMenu()" />
+    <app-navbar-menu [userName]="user.name" [userImage]="user.imageUrl" [ngClass]="this.navbarService.showMenu ? 'visible' : 'hidden'" />
+  </div>
+</nav>
+<div class="overlay" [ngClass]="this.navbarService.showMenu ? 'overlay-visible' : 'overlay-hidden'"
+  (click)="toggleMenu()"></div>

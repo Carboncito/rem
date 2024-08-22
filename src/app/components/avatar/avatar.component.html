@@ -1,0 +1,6 @@
+@if (imageUrl) {
+<img alt="avatar" class="rounded-full self-end object-scale-down" [ngClass]="getClass()" [src]="imageUrl" />
+}
+@if (text) {
+<p>{{ text }}</p>
+}
