@@ -1,13 +1,19 @@
 <div [className]="getClass()">
   @switch (icon) {
   @case ('menu') {
-  <app-menu-icon />
+  <app-menu-icon [class]="class" />
   }
   @case ('arrow-drop') {
-  <app-arrow-drop-icon />
+  <app-arrow-drop-icon [class]="class" />
   }
   @case ('logout') {
-  <app-logout-icon />
+  <app-logout-icon [class]="class" />
+  }
+  @case ('google') {
+  <app-google-icon [class]="class" />
+  }
+  @case ('github') {
+  <app-github-icon [class]="class" />
   }
   }
 </div>

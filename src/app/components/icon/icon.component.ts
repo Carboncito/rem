@@ -4,6 +4,8 @@ import { ArrowDropIconComponent } from './arrow-drop-icon/arrow-drop-icon.compon
 import { MenuIconComponent } from './menu-icon/menu-icon.component';
 import { CommonModule } from '@angular/common';
 import { LogoutIconComponent } from './logout-icon/logout-icon.component';
+import { GoogleIconComponent } from './google-icon/google-icon.component';
+import { GithubIconComponent } from './github-icon/github-icon.component';
 
 @Component({
   selector: 'app-icon',
@@ -13,6 +15,8 @@ import { LogoutIconComponent } from './logout-icon/logout-icon.component';
     ArrowDropIconComponent,
     MenuIconComponent,
     LogoutIconComponent,
+    GoogleIconComponent,
+    GithubIconComponent,
   ],
   templateUrl: './icon.component.html',
   styleUrl: './icon.component.css',
@@ -20,6 +24,7 @@ import { LogoutIconComponent } from './logout-icon/logout-icon.component';
 export class IconComponent {
   @Input({ required: true }) icon: IconName = 'arrow-drop';
   @Input() asButton: boolean = false;
+  @Input() class: string = '';
 
   getClass(): string {
     return `hover:bg-secondary-200 rounded-full ${

@@ -1,9 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-menu-icon',
   standalone: true,
   imports: [],
-  templateUrl: './menu-icon.component.html',
+  template: ` <svg
+    xmlns="http://www.w3.org/2000/svg"
+    height="24px"
+    viewBox="0 -960 960 960"
+    width="24px"
+    fill="#e8eaed"
+    [class]="class"
+  >
+    <path
+      d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+    />
+  </svg>`,
 })
-export class MenuIconComponent {}
+export class MenuIconComponent {
+  @Input() class = '';
+}
