@@ -1,0 +1,15 @@
+<div class="flex justify-center items-center h-svh">
+  <div class="max-w-lg w-full border-[1px] rounded-2xl border-secondary-200 bg-primary-300 bg-opacity-5 px-12 py-4">
+    <p class="text-xl text-center">Login</p>
+    <div class="flex flex-col my-5">
+      <app-input id="email" label="Email" placeholder="username@gmal.com" />
+      <app-input class="pt-3" label="Password" placeholder="Password" type="password" />
+    </div>
+    <app-button label="Sign in" [fullWidth]="true" class="mt-6" (onClick)="onLogin()" />
+    <p class="my-4 text-center text-xs">or continue with</p>
+    <div class="flex justify-evenly">
+      <app-button variant="google" icon="google" />
+      <app-button variant="github" icon="github" />
+    </div>
+  </div>
+</div>

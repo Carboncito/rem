@@ -1,0 +1,9 @@
+<button [ngClass]="[getVariantClass(), fullWidth ? 'w-full' : '']" class="flex justify-center"
+  (click)="onClickHandler()">
+  @if (icon) {
+  <app-icon class="w-6 h-6" [icon]="icon" />
+  }
+  @if (label) {
+  <p [className]="icon ? 'ml-2': ''">{{ label }}</p>
+  }
+</button>

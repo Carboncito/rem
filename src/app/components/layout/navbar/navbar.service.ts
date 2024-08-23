@@ -15,4 +15,8 @@ export class NavbarService {
   toggleMenu() {
     this._showMenu = !this._showMenu;
   }
+
+  resetState() {
+    this._showMenu = false;
+  }
 }

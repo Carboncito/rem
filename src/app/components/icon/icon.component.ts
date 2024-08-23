@@ -27,8 +27,8 @@ export class IconComponent {
   @Input() class: string = '';
 
   getClass(): string {
-    return `hover:bg-secondary-200 rounded-full ${
-      this.asButton ? 'cursor-pointer' : ''
+    return `rounded-full ${
+      this.asButton ? 'cursor-pointer hover:bg-secondary-200' : ''
     }`;
   }
 }

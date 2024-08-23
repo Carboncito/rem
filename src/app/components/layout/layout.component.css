@@ -13,4 +13,5 @@
   display: block;
   height: 100%;
   grid-area: content;
+  padding: 24px
 }

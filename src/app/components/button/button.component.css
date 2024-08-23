@@ -1,0 +1,26 @@
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.button-primary {
+  @apply bg-primary-300;
+  @apply hover:bg-primary-200;
+  @apply active:bg-primary-300;
+}
+
+.button-secondary {
+  @apply bg-secondary-300;
+}
+
+.button-danger {
+  @apply bg-red-500;
+}
+
+.button-google {
+  background: white;
+}
+
+.button-github {
+  background: white;
+}

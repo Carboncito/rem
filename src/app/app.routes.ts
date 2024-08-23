@@ -1,13 +1,21 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './pages';
+import { HomeComponent, LoginComponent } from './pages';
+import { Routes as AppRoutes } from './models';
+import { authGuard } from './guards';
 
 export const routes: Routes = [
   {
-    path: '',
+    path: AppRoutes.HOME,
+    canActivate: [authGuard],
     component: HomeComponent,
   },
   {
+    path: AppRoutes.LOGIN,
+    canActivate: [authGuard],
+    component: LoginComponent,
+  },
+  {
     path: '**',
-    redirectTo: '',
+    redirectTo: AppRoutes.HOME,
   },
 ];

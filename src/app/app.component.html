@@ -1,1 +1,5 @@
+@if (isAuthenticated()) {
 <app-layout />
+} @else {
+<router-outlet></router-outlet>
+}
