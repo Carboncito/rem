@@ -23,12 +23,9 @@ import { GithubIconComponent } from './github-icon/github-icon.component';
 })
 export class IconComponent {
   @Input({ required: true }) icon: IconName = 'arrow-drop';
-  @Input() asButton: boolean = false;
   @Input() class: string = '';
 
   getClass(): string {
-    return `rounded-full ${
-      this.asButton ? 'cursor-pointer hover:bg-secondary-200' : ''
-    }`;
+    return `rounded-full`;
   }
 }

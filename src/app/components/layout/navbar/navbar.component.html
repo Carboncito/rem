@@ -3,11 +3,12 @@
     <app-icon class="sm:hidden" icon="menu" />
     <p class="capitalize pl-2 sm:pl-0">rem</p>
   </div>
-  <div class="flex flex-row items-center">
-    <app-avatar size="small" [imageUrl]="user.imageUrl" />
-    <app-icon class="ml-2" icon="arrow-drop" [asButton]="true" (click)="toggleMenu()" />
-    <app-navbar-menu [userName]="user.name" [userImage]="user.imageUrl" [ngClass]="this.navbarService.showMenu ? 'visible' : 'hidden'" />
+  <div class="flex flex-row items-center p-3 cursor-pointer hover:bg-secondary-300" (click)="toggleMenu()">
+    <app-avatar class="mr-2" size="small" [imageUrl]="user.imageUrl" />
+    <app-icon icon="arrow-drop" />
   </div>
+  <app-navbar-menu [userName]="user.name" [userImage]="user.imageUrl"
+    [ngClass]="this.navbarService.showMenu ? 'visible' : 'hidden'" />
 </nav>
 <div class="overlay" [ngClass]="this.navbarService.showMenu ? 'overlay-visible' : 'overlay-hidden'"
   (click)="toggleMenu()"></div>
