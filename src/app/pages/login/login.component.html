@@ -1,11 +1,17 @@
 <div class="flex justify-center items-center h-svh">
-  <div class="max-w-lg w-full border-[1px] rounded-2xl border-secondary-200 bg-primary-300 bg-opacity-5 px-7 py-4 md:px-12 md:py-4 mx-12 md:mx-0">
+  <div
+    class="max-w-lg w-full border-[1px] rounded-2xl border-secondary-200 bg-primary-300 bg-opacity-5 px-7 py-4 md:px-12 md:py-4 mx-12 md:mx-0">
     <p class="text-xl text-center">Login</p>
-    <div class="flex flex-col my-5">
-      <app-input id="email" label="Email" placeholder="username@gmal.com" />
-      <app-input class="pt-3" label="Password" placeholder="Password" type="password" />
-    </div>
-    <app-button label="Sign in" [fullWidth]="true" class="mt-6" (onClick)="onLogin()" />
+    <form [formGroup]="form" (ngSubmit)="onLogin()">
+      <div class="flex flex-col my-5">
+        <app-input id="email" type="email" label="Email" placeholder="username@gmal.com" formControlName="email"
+          [required]="true" [error]="getErrorInput('email')" />
+        <app-input type="password" class="pt-3" label="Password" placeholder="Password" formControlName="password"
+          [required]="true" [error]="getErrorInput('password')" />
+      </div>
+      <app-button [loading]="loading" [disabled]="form.invalid" label="Sign in" [fullWidth]="true" class="mt-6"
+        type="submit" />
+    </form>
     <p class="my-4 text-center text-xs">or continue with</p>
     <div class="flex justify-evenly">
       <app-button variant="google" icon="google" />

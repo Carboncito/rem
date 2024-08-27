@@ -1,9 +1,12 @@
-<button [ngClass]="[getVariantClass(), fullWidth ? 'w-full' : '']" class="flex justify-center"
-  (click)="onClickHandler()">
-  @if (icon) {
+<button [type]="type" [disabled]="disabled" [ngClass]="[getVariantClass(), fullWidth ? 'w-full' : '']"
+  class="flex justify-center" (click)="onClickHandler()">
+  @if (!loading && icon) {
   <app-icon class="w-6 h-6" [icon]="icon" />
   }
-  @if (label) {
+  @if (!loading &&label) {
   <p [className]="icon ? 'ml-2': ''">{{ label }}</p>
+  }
+  @if (loading) {
+    <app-spinner [color]="getSpinnerColor()" />
   }
 </button>

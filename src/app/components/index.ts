@@ -1,6 +1,7 @@
 export * from './avatar/avatar.component';
 export * from './button/button.component';
 export * from './icon/arrow-drop-icon/arrow-drop-icon.component';
+export * from './icon/close-icon/close-icon.component';
 export * from './icon/github-icon/github-icon.component';
 export * from './icon/google-icon/google-icon.component';
 export * from './icon/icon.component';
@@ -13,3 +14,5 @@ export * from './layout/layout.component';
 export * from './layout/navbar/navbar-menu/navbar-menu.component';
 export * from './layout/navbar/navbar.component';
 export * from './layout/navbar/navbar.service';
+export * from './spinner/spinner.component';
+export * from './toast/toast.component';

@@ -1,1 +1,1 @@
-export type IconName = 'arrow-drop' | 'menu' | 'logout' | 'google' | 'github';
+export type IconName = 'arrow-drop' | 'menu' | 'logout' | 'google' | 'github' | 'close';

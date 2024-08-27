@@ -3,13 +3,23 @@ button {
   border-radius: 0.5rem;
 }
 
+button:disabled {
+  opacity: 0.5;
+}
+
 .button-primary {
+  @apply bg-primary-300 hover:bg-primary-200 active:bg-primary-300;
+}
+
+.button-primary:hover:is([disabled]) {
   @apply bg-primary-300;
-  @apply hover:bg-primary-200;
-  @apply active:bg-primary-300;
 }
 
 .button-secondary {
+  @apply bg-secondary-300;
+}
+
+.button-secondary:hover:is([disabled]) {
   @apply bg-secondary-300;
 }
 
@@ -17,10 +27,12 @@ button {
   @apply bg-red-500;
 }
 
-.button-google {
-  background: white;
+
+.button-danger:hover:is([disabled]) {
+  @apply bg-red-500;
 }
 
+.button-google,
 .button-github {
   background: white;
 }

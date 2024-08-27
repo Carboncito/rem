@@ -1,10 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component, forwardRef, Input } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
   selector: 'app-input',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './input.component.html',
   styleUrl: './input.component.css',
   providers: [
@@ -19,6 +20,9 @@ export class InputComponent implements ControlValueAccessor {
   @Input() label: string = '';
   @Input() type: HTMLInputElement['type'] = 'text';
   @Input() placeholder?: HTMLInputElement['placeholder'];
+  @Input() required?: HTMLInputElement['required'];
+  @Input() id?: HTMLInputElement['id'];
+  @Input() error?: boolean = false;
   value: string = '';
 
   onChange: any = () => {};

@@ -6,9 +6,7 @@ import { Routes as AppRoutes } from '../models';
 export const authGuard: CanActivateFn = (route, state) => {
   const authService = inject(AuthService);
   const router = inject(Router);
-  const isAuthenticated = authService.checkAuth()
-
-  console.log(route.url[0]?.path)
+  const isAuthenticated = authService.checkAuth();
 
   if (route.url[0]?.path !== AppRoutes.LOGIN && !isAuthenticated) {
     console.log('Not authenticated');

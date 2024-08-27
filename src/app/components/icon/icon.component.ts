@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { LogoutIconComponent } from './logout-icon/logout-icon.component';
 import { GoogleIconComponent } from './google-icon/google-icon.component';
 import { GithubIconComponent } from './github-icon/github-icon.component';
+import { CloseIconComponent } from './close-icon/close-icon.component';
 
 @Component({
   selector: 'app-icon',
@@ -17,6 +18,7 @@ import { GithubIconComponent } from './github-icon/github-icon.component';
     LogoutIconComponent,
     GoogleIconComponent,
     GithubIconComponent,
+    CloseIconComponent,
   ],
   templateUrl: './icon.component.html',
   styleUrl: './icon.component.css',
