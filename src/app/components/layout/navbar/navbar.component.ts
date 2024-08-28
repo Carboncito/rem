@@ -4,7 +4,8 @@ import { IconComponent } from '../../icon';
 import { CommonModule } from '@angular/common';
 import { NavbarMenuComponent } from './navbar-menu/navbar-menu.component';
 import { NavbarService } from './navbar.service';
-import { User } from '../../../models';
+import { Routes, User } from '../../../models';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -19,9 +20,13 @@ export class NavbarComponent {
     'https://seeklogo.com/images/B/Bob_Esponja-logo-0D3F3F01DD-seeklogo.com.png'
   );
 
-  constructor(public navbarService: NavbarService) {}
+  constructor(public navbarService: NavbarService, private router: Router) {}
 
   toggleMenu() {
     this.navbarService.toggleMenu();
+  }
+
+  goWatchlist() {
+    this.router.navigate([Routes.WATCHLIST]);
   }
 }
