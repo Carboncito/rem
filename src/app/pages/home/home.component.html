@@ -1,1 +1,19 @@
-<p>home works!</p>
+<section class="flex">
+  <app-input class="w-full mr-4" inputType="dark" [formControl]="searchInput" placeholder="Search a movie..." />
+  <!-- <app-button label="Filter" /> -->
+</section>
+<section class="my-6">
+  <div class="flex gap-4 flex-wrap justify-center sm:justify-start">
+    @for (video of data; track video.imdbID) {
+    <app-card-video [video]="video" />
+    } @empty {
+    @if (error) {
+    <p class="text-lg">Ops! Something wen wrong, try again!</p>
+    } @else if (empty){
+    <p class="text-lg">We could't find anything!</p>
+    } @else {
+    <p class="text-center text-lg">Write something in the searcher!</p>
+    }
+    }
+  </div>
+</section>

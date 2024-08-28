@@ -1,0 +1,9 @@
+:host {
+  position: relative;
+  display: block;
+  width: 13rem;
+  cursor: pointer;
+  z-index: -1;
+  @apply bg-gray-800 rounded-b-lg;
+  @apply hover:opacity-80;
+}

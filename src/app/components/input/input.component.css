@@ -1,0 +1,10 @@
+.input-light {
+  @apply bg-white;
+  color: black;
+}
+
+.input-dark {
+  @apply bg-secondary-300;
+  @apply border-secondary-200;
+  color: white;
+}
