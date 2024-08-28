@@ -7,6 +7,7 @@ import { LogoutIconComponent } from './logout-icon/logout-icon.component';
 import { GoogleIconComponent } from './google-icon/google-icon.component';
 import { GithubIconComponent } from './github-icon/github-icon.component';
 import { CloseIconComponent } from './close-icon/close-icon.component';
+import { BookmarkIconComponent } from './bookmark-icon/bookmark-icon.component';
 
 @Component({
   selector: 'app-icon',
@@ -19,6 +20,7 @@ import { CloseIconComponent } from './close-icon/close-icon.component';
     GoogleIconComponent,
     GithubIconComponent,
     CloseIconComponent,
+    BookmarkIconComponent,
   ],
   templateUrl: './icon.component.html',
   styleUrl: './icon.component.css',

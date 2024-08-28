@@ -1,4 +1,5 @@
 export * from './arrow-drop-icon/arrow-drop-icon.component';
+export * from './bookmark-icon/bookmark-icon.component';
 export * from './close-icon/close-icon.component';
 export * from './github-icon/github-icon.component';
 export * from './google-icon/google-icon.component';

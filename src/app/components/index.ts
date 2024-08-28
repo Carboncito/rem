@@ -2,6 +2,7 @@ export * from './avatar/avatar.component';
 export * from './button/button.component';
 export * from './card-video/card-video.component';
 export * from './icon/arrow-drop-icon/arrow-drop-icon.component';
+export * from './icon/bookmark-icon/bookmark-icon.component';
 export * from './icon/close-icon/close-icon.component';
 export * from './icon/github-icon/github-icon.component';
 export * from './icon/google-icon/google-icon.component';
