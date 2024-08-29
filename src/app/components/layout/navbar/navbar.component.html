@@ -1,10 +1,10 @@
 <nav class="flex flex-row flex-1 justify-between items-center px-6 bg-secondary-400">
-  <div class="flex flex-row">
+  <div class="flex flex-row px-4 py-1 cursor-pointer" (click)="navigate()">
     <app-icon class="sm:hidden" icon="menu" />
     <p class="capitalize pl-2 sm:pl-0">rem</p>
   </div>
   <div class="flex flex-row">
-    <div class="flex flex-row items-center p-3 cursor-pointer hover:bg-secondary-300" (click)="goWatchlist()" >
+    <div class="flex flex-row items-center p-3 cursor-pointer hover:bg-secondary-300" (click)="navigate('watchlist')">
       <app-icon icon="bookmark" />
     </div>
     <div class="flex flex-row p-3 items-center cursor-pointer hover:bg-secondary-300" (click)="toggleMenu()">

@@ -6,7 +6,7 @@
   left: 0;
   width: 100%;
   height: var(--navbar-height);
-  background-color: red;
+  z-index: 1;
 }
 
 .sub-menu {
@@ -25,7 +25,6 @@
   position: fixed;
   top: var(--navbar-height);
   width: 100%;
-  z-index: 1;
 }
 
 .overlay-visible {

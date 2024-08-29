@@ -1,1 +1,6 @@
 <h2 class="text-xl">Watchlist:</h2>
+<section class="my-6 flex flex-wrap gap-3 justify-center sm:justify-start ">
+  @for (video of watchlist; track video._id) {
+    <app-card-video [video]="video" [isSaved]="true" />
+  }
+</section>

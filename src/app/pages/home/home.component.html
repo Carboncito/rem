@@ -3,9 +3,15 @@
   <!-- <app-button label="Filter" /> -->
 </section>
 <section class="my-6">
-  <div class="flex gap-4 flex-wrap justify-center sm:justify-start">
+  <div class="flex gap-4 flex-wrap justify-center lg:justify-start">
     @for (video of data; track video.imdbID) {
-    <app-card-video [video]="video" />
+    <app-card-video (addClicked)="addToWatchlist(video)" [video]="{
+      title: video.Title,
+      year: video.Year,
+      videoId: video.imdbID,
+      type: video.Type,
+      poster: video.Poster,
+    }" />
     } @empty {
     @if (error) {
     <p class="text-lg">Ops! Something wen wrong, try again!</p>

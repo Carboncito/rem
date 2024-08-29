@@ -8,6 +8,7 @@ import { GoogleIconComponent } from './google-icon/google-icon.component';
 import { GithubIconComponent } from './github-icon/github-icon.component';
 import { CloseIconComponent } from './close-icon/close-icon.component';
 import { BookmarkIconComponent } from './bookmark-icon/bookmark-icon.component';
+import { AddIconComponent } from './add-icon/add-icon.component';
 
 @Component({
   selector: 'app-icon',
@@ -21,6 +22,7 @@ import { BookmarkIconComponent } from './bookmark-icon/bookmark-icon.component';
     GithubIconComponent,
     CloseIconComponent,
     BookmarkIconComponent,
+    AddIconComponent,
   ],
   templateUrl: './icon.component.html',
   styleUrl: './icon.component.css',

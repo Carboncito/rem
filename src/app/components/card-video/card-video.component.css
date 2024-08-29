@@ -1,9 +1,29 @@
 :host {
   position: relative;
   display: block;
-  width: 13rem;
-  cursor: pointer;
-  z-index: -1;
+  @apply w-72;
+  @apply sm:w-52;
   @apply bg-gray-800 rounded-b-lg;
-  @apply hover:opacity-80;
+}
+
+.grid-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+  ". . button"
+  ". content ."
+  ". . .";
+}
+
+.grid-card-button {
+  grid-area: button;
+  justify-self: end;
+  height: fit-content;
+}
+
+.grid-card-content {
+  display: block;
+  grid-area: content;
+  width: auto;
+  height: 50%;
 }

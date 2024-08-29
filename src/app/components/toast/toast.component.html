@@ -1,6 +1,6 @@
 @if (shouldRender) {
 <div [ngClass]="[toastColor, toastBorder, visible ? 'animate-fadeInUp' : 'animate-fadeInDown']"
-  class="fixed border-2 bg-opacity-70 bottom-5 right-5 max-w-xs p-4 rounded-lg shadow-lg flex items-center justify-between text-white"
+  class="fixed border-2 bg-opacity-70 bottom-5 right-5 max-w-xs p-4 rounded-lg shadow-lg flex items-center justify-between text-white z-10"
   role="alert">
   <span>{{ message }}</span>
   <button (click)="close()" class="ml-4">

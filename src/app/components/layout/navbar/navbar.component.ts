@@ -25,8 +25,8 @@ export class NavbarComponent {
   toggleMenu() {
     this.navbarService.toggleMenu();
   }
-
-  goWatchlist() {
-    this.router.navigate([Routes.WATCHLIST]);
+  navigate(to?: 'watchlist') {
+    const route = to ? Routes.WATCHLIST : Routes.HOME;
+    this.router.navigate([route]);
   }
 }
