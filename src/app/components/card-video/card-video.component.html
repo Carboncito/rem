@@ -1,18 +1,21 @@
-<img class="rounded-t-lg" [src]="video.poster" [alt]="video.title" />
+<img class="rounded-t-lg w-72 sm:w-52 h-80" [src]="video.poster" [alt]="video.title" />
 <label class="absolute right-0 top-[288px] rounded-tl-md rounded-bl-md bg-blue-500 px-2 py-1">Type: {{ video.type
   }}</label>
 <div class="mx-2 py-3">
   <p>Title: {{ video.title }}</p>
   <p>Year: {{ video.year }}</p>
 </div>
-@if (!isSaved) {
 <div
   class="opacity-0 hover:opacity-100 rounded-t-md rounded-b-md hover:bg-opacity-95 absolute left-0 top-0 w-full h-full bg-slate-700 grid-card">
   <div class="self-center grid-card-content text-center">
     <p class="font-semibold text-2xl">{{ video.title }}</p>
     <p>{{ video.year }}</p>
   </div>
+  @if (!isSaved) {
   <app-icon icon="add" class="m-1 cursor-pointer grid-card-button hover:bg-slate-500 hover:rounded-full"
     (click)="onClickAdd()" />
+  }
+  @if (isSaved) {
+  <app-button icon="delete" variant="danger" class="grid-card-button mt-3 mr-2" (onClick)="onClickDelete()" />
+  }
 </div>
-}

@@ -6,4 +6,5 @@ export type IconName =
   | 'github'
   | 'close'
   | 'bookmark'
-  | 'add';
+  | 'add'
+  | 'delete';

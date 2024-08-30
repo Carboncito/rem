@@ -9,6 +9,7 @@ import { GithubIconComponent } from './github-icon/github-icon.component';
 import { CloseIconComponent } from './close-icon/close-icon.component';
 import { BookmarkIconComponent } from './bookmark-icon/bookmark-icon.component';
 import { AddIconComponent } from './add-icon/add-icon.component';
+import { DeleteIconComponent } from './delete-icon/delete-icon.component';
 
 @Component({
   selector: 'app-icon',
@@ -23,6 +24,7 @@ import { AddIconComponent } from './add-icon/add-icon.component';
     CloseIconComponent,
     BookmarkIconComponent,
     AddIconComponent,
+    DeleteIconComponent,
   ],
   templateUrl: './icon.component.html',
   styleUrl: './icon.component.css',

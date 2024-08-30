@@ -24,8 +24,8 @@ export class OmdbService {
   constructor(private httService: HttpClient) {}
   private url = getPath() + '/omdb';
 
-  getMoviesBySearch(query: string): Observable<SearchOMDB> {
-    const s = `?s=${query}`;
+  getMoviesBySearch(query: string, page: number = 1): Observable<SearchOMDB> {
+    const s = `?s=${query}${page !== 1 ? '&page=' + page : ''}`;
     return this.httService.get<SearchOMDB>(this.url + s);
   }
 }

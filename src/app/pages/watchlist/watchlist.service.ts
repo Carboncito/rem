@@ -19,4 +19,8 @@ export class WatchlistService {
   addToWatchlist(video: Watchlist): Observable<WatchlistStored[]> {
     return this.httpService.post<WatchlistStored[]>(this.url, video);
   }
+
+  deleteVideo(videoId: string): Observable<WatchlistStored[]> {
+    return this.httpService.delete<WatchlistStored[]>(this.url + `/${videoId}`);
+  }
 }
