@@ -9,13 +9,11 @@ export const authGuard: CanActivateFn = (route, state) => {
   const isAuthenticated = authService.checkAuth();
 
   if (route.url[0]?.path !== AppRoutes.LOGIN && !isAuthenticated) {
-    console.log('Not authenticated');
     router.navigate([AppRoutes.LOGIN]);
     return false;
   }
 
   if (route.url[0]?.path === AppRoutes.LOGIN && isAuthenticated) {
-    console.log('Authenticated');
     router.navigate([AppRoutes.HOME]);
     return false;
   }

@@ -55,7 +55,6 @@ export class HomeComponent implements OnInit {
   }
 
   addToWatchlist(video: Video) {
-    console.log('wii')
     const data = this.convertToWatchlist(video);
     this.watchlistService.addToWatchlist(data).subscribe({
       next: (data) => {
