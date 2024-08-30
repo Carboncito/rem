@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from '../../environments/environment';
+import { getPath } from '../utils';
 
 export interface SearchOMDB {
   Search: Video[];
@@ -22,11 +22,10 @@ export interface Video {
 })
 export class OmdbService {
   constructor(private httService: HttpClient) {}
-
-  private fullUrl = environment.OMDB_FULL_URL;
+  private url = getPath() + '/omdb';
 
   getMoviesBySearch(query: string): Observable<SearchOMDB> {
-    const s = `&s=${query}`;
-    return this.httService.get<SearchOMDB>(this.fullUrl + s);
+    const s = `?s=${query}`;
+    return this.httService.get<SearchOMDB>(this.url + s);
   }
 }

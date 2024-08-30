@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WatchlistService } from './watchlist.service';
 import { CardVideoComponent } from '../../components';
-import { Watchlist, WatchlistStored } from '../../models';
+import { WatchlistStored } from '../../models';
 
 @Component({
   selector: 'app-watchlist',

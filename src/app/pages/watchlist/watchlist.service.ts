@@ -1,17 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from '../../../environments/environment';
 import { Observable } from 'rxjs';
 import { Watchlist, WatchlistStored } from '../../models';
-import { Video } from '../../services';
+import { getPath } from '../../utils';
 
 @Injectable({
   providedIn: 'root',
 })
 export class WatchlistService {
-  private url = environment.DEV
-    ? `http://${document.location.hostname}:3000/user/watchlist`
-    : 'http://localhost:3000/user/watchlist';
+  private url = getPath() + '/user/watchlist';
+
   constructor(private httpService: HttpClient) {}
 
   getWatchlist(): Observable<WatchlistStored[]> {

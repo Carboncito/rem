@@ -5,16 +5,14 @@ import { NavbarService } from '../components';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { TokenService } from './token.service';
-import { environment } from '../../environments/environment';
+import { getPath } from '../utils';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
   private isAuthenticated = false;
-  private url = environment.DEV
-    ? `http://${document.location.hostname}:3000`
-    : 'http://localhost:3000';
+  private url = getPath();
 
   constructor(
     private http: HttpClient,
